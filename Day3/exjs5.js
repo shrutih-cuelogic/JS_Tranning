@@ -1,4 +1,4 @@
-arr =  ['0000','0100','1100','1000','1100','0000'];
+/*arr =  ['0000','0100','1100','1000','1100','0000'];
 newarr = [];
 count = 0 ;
 splitarr =[];
@@ -26,4 +26,17 @@ for(i=0;i<splitarr.length;i++)
   }
   console.log(newarr);
 }
-console.log(newarr);
+console.log(newarr);*/
+
+
+var arr =  ['0000','0100','1100','1000','1100'];
+function arrayTo2DArray2 (arr) {
+  splitarr = [];
+  for (i=0;i<arr.length;i++){
+    splitarr.push(arr[i].split(''));
+    console.log(splitarr);
+    splitarr.slice(0, 5);
+    console.log(splitarr);
+  }
+}
+arrayTo2DArray2(arr);
