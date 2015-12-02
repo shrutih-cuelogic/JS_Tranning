@@ -1,7 +1,7 @@
-Number.prototype.Floatmethod = function() {
-    return parseFloat(this).toFixed(2);
+Number.prototype.Intmethod = function() {
+    return parseInt(this);
 };
-function convfloat() {
-    var n = 60.00;
-   console.log(n.Floatmethod());
-}convfloat(n);
+function convint() {
+    var a = 10.000;
+   console.log(a.Intmethod());
+}convint(a);

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    function listtext() {
+        var ele_list = document.getElementById('language').getElementsByTagName('li');
+        for (i = 0; i < ele_list.length; i++) {
+            alert(ele_list[i].innerHTML);
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <p>Displaying the list text</p>
+    <button onclick="listtext()">Click to see the list</button>
+    <div>
+        <ul id="language">
+            <li>PHP</li>
+            <li>ASP</li>
+            <li>JAVA</li>
+            <li>PYTHON</li>
+            <li>C</li>
+        </ul>
+    </div>
+</body>
+
+</html>
