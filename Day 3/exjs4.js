@@ -1,16 +1,12 @@
-var UNIX_timestamp = prompt("Enter unit time stamp: ")
+var unix_timestamp = prompt("Enter unit time stamp: ")
 
-function timeConverter(UNIX_timestamp){
- var a = new Date(UNIX_timestamp*1000);
- console.log(a);
-    var year = a.getUTCFullYear();
-    var month = a.getUTCMonth();
-    var date = a.getUTCDate();
-    var hour = a.getUTCHours();
-    var min = a.getUTCMinutes();
-    var sec = a.getUTCSeconds();
-    var time = year + month + date + hour + min + sec ;
-    console.log(time);
-    return time
-}timeConverter(UNIX_timestamp)
-//console.log(timeConverter.getTime());
+function convert_unixtime_To_utctime(unix_timestamp) {
+    var a = new Date(unix_timestamp * 1000);
+    
+    var utc_day = new Date(a.getUTCFullYear(), a.getUTCMonth(), a.getUTCDate(), a.getUTCHours(), a.getUTCMinutes(),
+        a.getUTCSeconds());
+    var utc_time = utc_day.getTime();
+    return utc_time
+}convert_unixtime_To_utctime(unix_timestamp);
+console.log("Unix time: ",unix_timestamp);
+console.log("UTC timestamp of entered unixtime is: ", convert_unixtime_To_utctime(unix_timestamp));
