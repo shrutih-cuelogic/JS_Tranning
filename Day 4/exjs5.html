@@ -3,10 +3,10 @@
 
 <head>
     <script type="text/javascript">
-    function listtext() {
-        var ele_list = document.getElementById('language').getElementsByTagName('li');
-        for (i = 0; i < ele_list.length; i++) {
-            alert(ele_list[i].innerHTML);
+    function display_list_text() {
+        var element_list = document.getElementById('languages').getElementsByTagName('li');
+        for (var i = 0, len = element_list.length; i < len; i++) {
+            alert(element_list[i].innerHTML);
         }
     }
     </script>
@@ -14,9 +14,9 @@
 
 <body>
     <p>Displaying the list text</p>
-    <button onclick="listtext()">Click to see the list</button>
+    <button onclick="display_list_text()">Click to see the list</button>
     <div>
-        <ul id="language">
+        <ul id="languages">
             <li>PHP</li>
             <li>ASP</li>
             <li>JAVA</li>
