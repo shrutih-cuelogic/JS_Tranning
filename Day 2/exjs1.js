@@ -25,39 +25,40 @@ function Mul(a, b) {
     return a * b;
 }Mul(12, 3);
 
+/*
+The arguments variable is a special variable in Javascript, available within any function. 
+It's not a true array, but it contains the argument values passed to the function 
+which can be accessed like array elements 
+(so, arguments[0] is the first argument, arguments[1] is the second, and so on).
+*/
+function Addargs() {
+    var a = 0;
+    for (var i=0; i < arguments.length; i++) {
+      a += arguments[i];
+    }
+    return a;
+}Addargs(1, 2, 3, 4);
 
-function Add() {
-    if(arguments.length < 2){
-      throw "Atleast two argument should be passed";
+function Subargs() {
+    var a = 0;
+    for (var i=0; i < arguments.length; i++) {
+      a -= arguments[i];
     }
-    else if(typeof(arguments[0] && arguments[1] == 0)){
-      return arguments[0] + arguments[1];
-    }
-}Add(12, 3)
+    return a;
+}Subargs(1, 2, 3, 4);
 
-function Sub() {
-    if(arguments.length < 2){
-      throw "Atleast two argument should be passed";
+function Mulargs() {
+    var a = 0;
+    for (var i=0; i < arguments.length; i++) {
+      a *= arguments[i];
     }
-    else if(typeof(arguments[0] && arguments[1] == 0)){
-      return arguments[0] - arguments[1];
-    }
-}Sub(12, 3)
+    return a;
+}Mulargs(1, 2, 3, 4);
 
-function Div() {
-    if(arguments.length < 2){
-      throw "Atleast two argument should be passed";
+function Divargs() {
+    var a = 0;
+    for (var i=0; i < arguments.length; i++) {
+      a /= arguments[i];
     }
-    else if(typeof(arguments[0] && arguments[1] == 0)){
-      return arguments[0] / arguments[1];
-    }
-}Div(12, 3)
-
-function Mul() {
-    if(arguments.length < 2){
-      throw "Atleast two argument should be passed";
-    }
-    else if(typeof(arguments[0] && arguments[1] == 0)){
-      return arguments[0] * arguments[1];
-    }
-}Mul(12, 3)
+    return a;
+}Divargs(1, 2, 3, 4);

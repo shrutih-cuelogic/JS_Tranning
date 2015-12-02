@@ -4,13 +4,17 @@ There are different ways to create new objects:
 Three ways to create an object variable:*/
 
 //1.Define and create a single object, using an object literal.
-var Cars = {carname:"Zest", brand:"Tata-Indica", price:8,55,000};
+var Cars = {
+    carname: "Zest",
+    brand: "Tata-Indica",
+    price: 855000
+};
 
 //2.Define and create a single object, with the keyword new.
 var Cars = new Object();
 Cars.carname = "Zest";
 Cars.brand = "Tata-Indica";
-Cars.price = 8,55,000;
+Cars.price = 855000;
 
 //3.Define an object constructor, and then create objects of the constructed type.
 function Cars(name, brand, price) {
@@ -28,7 +32,7 @@ var TestNewCars = new Cars("Swift", "Maruti-Suzuki", 700000);
 var colors = ["red", "blue", "green", "black"];
 
 //2.Define and create array constructor using new keyword.
-var numbers = new Array(1,2,3,4,5);// an array with 5 elements
+var numbers = new Array(1, 2, 3, 4, 5); // an array with 5 elements
 
 //3.Define and create associative arrays.
 /*JavaScript does not support arrays with named indexes.
@@ -37,5 +41,5 @@ var colors = [];
 colors[0] = "red";
 colors[1] = "blue";
 colors[1] = "black";
-var x = colors.length;// person.length will return 3
+var x = colors.length; // colors.length will return 3
 var y = colors[1];

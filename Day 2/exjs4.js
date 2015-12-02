@@ -2,14 +2,14 @@
 all the variants of a loop structure(for,while,do while etc) */
 
 //for loop
-for (var i = 1; i < 101; i++) {
+for (var i = 1; i <= 100; i++) {
    console.log(i);
 }
 
 //while loop
 var i = 1, sum = 0;
 
-    while (i<101) {
+    while (i <= 100) {
 
       sum += i; 
       console.log(i++);
@@ -22,4 +22,4 @@ do{
 
       sum += i; 
       console.log(i++);
-    }while(i < 101);
+    }while(i <= 100);
