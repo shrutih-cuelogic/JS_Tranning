@@ -7,30 +7,52 @@
                     </br>
                 </div>
                 <div class="pro-content">
-                    <div class="pro-box" ng-repeat="item in employees" ng-if="current_id==item.id" >
-                        <form name="emp_viewForm">
-                          <p><span class="change-color"><strong>Employee id :</strong></span>
-                            {{item.id}}
-                          </p></br>
-                          <p>
-                            <span class="change-color"><strong>Employee name :</strong></span>
-                            <input type = "text" ng-model="item.emp_name"/>
-                          </p></br>
-                          <p>
-                            <span class="change-color"><strong>Employee email :</strong></span>
-                            <input type = "text" ng-model="item.email"/>
-                          </p></br>
-                          <p>
-                            <span class="change-color"><strong>Employee address :</strong></span>
-                            <input type = "text"  ng-model="item.address" />
-                          </p>
-                          </br>
-                          <div class="pull-left">
-                            <button type="button" class="btn btn-md btn-warning btn-size" ng-click="editEmpRecord()"><i class="fa fa-external-link-square" ng-disabled="emp_viewForm.$invalid"> Edit</i></button>
-                          </div>
-                        </form>
+                  <div class="pro-box" ng-repeat="item in employees" ng-if="current_id==item.id">
+                    <form name="editEmpForm">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"><span class="change-color"><strong>Employee id :</strong></span></label>
+                            <div class="col-sm-9">
+                                {{item.id}}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"><span class="change-color"><strong>Employee Name :</strong></span></label>
+                            <div class="col-sm-9">
+                                <input ng-model="item.emp_name" type="name" id="name" name="name" class="form-control" autofocus="true" autocomplete="off" required>
+                                <span style="color:red" ng-show="editEmpForm.name.$dirty && editEmpForm.name.$invalid">
+                              <span ng-show="editEmpForm.name.$error.required">Name is required.</span>
+                                </span>
+                            </div>
+                        </div>
+                        </br>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"><span class="change-color"><strong>Employee Email :</strong></span></label>
+                            <div class="col-sm-9">
+                                <input ng-model="item.email" type="email" id="email" name="email" class="form-control" autofocus="true" autocomplete="off" required>
+                                <span style="color:red" ng-show="editEmpForm.email.$dirty && editEmpForm.email.$invalid">
+                              <span ng-show="editEmpForm.email.$error.required">Email is required.</span>
+                                <span ng-show="editEmpForm.email.$error.email">Invalid email address.</span>
+                                </span>
+                            </div>
+                        </div>
+                        </br>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"><span class="change-color"><strong>Employee Address :</strong></span></label>
+                            <div class="col-sm-9">
+                                <input ng-model="item.address" type="address" id="address" name="address" class="form-control" autofocus="true" autocomplete="off" required>
+                                <span style="color:red" ng-show="editEmpForm.address.$dirty && editEmpForm.address.$invalid">
+                            <span ng-show="editEmpForm.address.$error.required">Address is required.</span>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
                     </div>
-                </div>
+                    </br>
+                    </br>
+                      <div>
+                          <button type="button" class="btn btn-md btn-warning btn-size" ng-click="editEmpRecord()"><i class="fa fa-external-link-square" ng-disabled="editEmpForm.$invalid"> Edit</i></button>
+                      </div>
+                  </div>
             </div>
         </div>
     </div>

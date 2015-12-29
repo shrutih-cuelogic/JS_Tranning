@@ -26,6 +26,6 @@ function HomeController($scope, $rootScope, $location, $routeParams, homeService
     }
 
     $scope.addEmpRecord = function(){
-    	
+    	var valid = homeService.addEmployee($scope.id, $scope.emp_name, $scope.email, $scope.address);
     }
 };

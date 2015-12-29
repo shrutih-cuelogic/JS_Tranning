@@ -45,7 +45,15 @@ function homeService(employeeService) {
         }
     }
 
+    function addEmployee(id, name, email,address){
+        console.log(id);
+        console.log(name);
+        console.log(email);
+        console.log(address);
+    }
+
     service.getEmp = getEmp;
     service.deleteEmployee = deleteEmployee;
+    service.addEmployee = addEmployee;
     return service
 };
