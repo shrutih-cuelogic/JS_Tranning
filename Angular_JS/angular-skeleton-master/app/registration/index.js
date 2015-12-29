@@ -1,0 +1,1 @@
+angular.module('registration',['registration.controller','registration.route']);

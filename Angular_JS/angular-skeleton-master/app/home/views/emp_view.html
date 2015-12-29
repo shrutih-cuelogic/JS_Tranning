@@ -1,0 +1,37 @@
+<div class="container wrapper wrapper-content">
+    <div class="row animated fadeInRight">
+        <div class="col-md-8">
+            <div class="pro float-e-margins">
+                <div class="pro-title">
+                    <h3><strong>Employee Details</strong></h3>
+                    </br>
+                </div>
+                <div class="pro-content">
+                    <div class="pro-box" ng-repeat="item in employees" ng-if="current_id==item.id" >
+                        <form name="emp_viewForm">
+                          <p><span class="change-color"><strong>Employee id :</strong></span>
+                            {{item.id}}
+                          </p></br>
+                          <p>
+                            <span class="change-color"><strong>Employee name :</strong></span>
+                            <input type = "text" ng-model="item.emp_name"/>
+                          </p></br>
+                          <p>
+                            <span class="change-color"><strong>Employee email :</strong></span>
+                            <input type = "text" ng-model="item.email"/>
+                          </p></br>
+                          <p>
+                            <span class="change-color"><strong>Employee address :</strong></span>
+                            <input type = "text"  ng-model="item.address" />
+                          </p>
+                          </br>
+                          <div class="pull-left">
+                            <button  type="button" class="btn btn-md btn-warning btn-size" ng-click="edit_click()"><i class="fa fa-external-link-square" ng-disabled="emp_viewForm.$invalid"></i> Edit</button>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,30 @@
-<p>Hello {{emp_name}}</p>
+<button type="button" class="btn btn-primary btn-side"><a href="#/emp_view/1">Add Employee</a></button>
+</br>
+</br>
+</br>
+<div class="table-responsive" id="side">
+    <table class="table-bordered table-condensed" style="margin-right:30px;">
+        <thead>
+            <tr>
+                <th class="name" style="width:200px">ID</th>
+                <th class="name" style="width:200px"><a ng-click="sort_by('emp_name')">Name <i class="fa fa-sort"></i></a></th>
+                <th class="name" style="width:200px">Email</th>
+                <th class="name" style="width:200px">Address </th>
+                <th class="name" style="width:100px"> </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in employees">
+                <td style="width:200px">{{ item.id }}</td>
+                <td style="width:200px"><a href="#/emp_view/{{ item.id }}" ng-model="item.emp_name">{{ item.emp_name }}</a></td>
+                <td style="width:200px" ng-model="item.email">{{ item.email }}</td>
+                <td style="width:200px" ng-model="item.address">{{ item.address }}</td>
+                <td style="width:100px">
+                    <a href="#" class="btn btn-info btn-sm" ng-click="deleteEmpRecord($index)">
+                        <span class="glyphicon glyphicon-trash"></span> Delete
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

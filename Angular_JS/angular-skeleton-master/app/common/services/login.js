@@ -12,7 +12,8 @@ function loginService(employeeService) {
         emp_email = email;
         emp_password = password;
 
-        var employee_credentials = employeeService.get();
+        var employee_credentials = employeeService.employee();
+        console.log(employee_credentials);
         var employeeObj;
         valid = false;
         for (var i = 0; i < employee_credentials.length; i++) {
@@ -23,7 +24,7 @@ function loginService(employeeService) {
             }
         }
         if(valid) {
-            localStorage.setItem('username',employeeObj.emp_name);
+            localStorage.setItem("employeeObj",JSON.stringify(employeeObj));
         }
         return valid;
     }

@@ -5,8 +5,10 @@ angular.module('tandem', [
   'ngRoute',
   'home',
   'employee',
-  'login'
+  'login',
+  'registration'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/home'});
+
+  	$routeProvider.otherwise({redirectTo: '/home'});
 }]);
