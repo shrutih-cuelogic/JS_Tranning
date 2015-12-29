@@ -45,6 +45,11 @@ function employeeService() {
             'address' : 'Wakad road,Pune'
         }]
     }
+
+    function deleteEmployee(ind) {
+        employee.splice(ind, 1);
+    }
+    
     service.set = set;
     service.employee = employee;
     return service;

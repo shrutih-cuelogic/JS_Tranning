@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-primary btn-side"><a href="#/emp_view/1">Add Employee</a></button>
+<button type="button" class="btn btn-primary btn-side">Add Employee</a></button>
 </br>
 </br>
 </br>
@@ -14,7 +14,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="item in employees">
+            <tr ng-repeat="item in employees | orderBy: 'id'">
                 <td style="width:200px">{{ item.id }}</td>
                 <td style="width:200px"><a href="#/emp_view/{{ item.id }}" ng-model="item.emp_name">{{ item.emp_name }}</a></td>
                 <td style="width:200px" ng-model="item.email">{{ item.email }}</td>

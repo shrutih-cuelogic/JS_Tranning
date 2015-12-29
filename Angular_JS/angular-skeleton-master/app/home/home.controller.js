@@ -9,27 +9,23 @@ function HomeController($scope, $rootScope, $location, $routeParams, homeService
     // } else {
     //     $location.path('/login');
 
-    $scope.employees = homeService.get();
+    $scope.employees = homeService.getEmp();
 
     $rootScope.$on('$routeChangeSuccess', function() {
         $rootScope.current_id = $routeParams.id;
     });
 
-    // $scope.edit_click = function() {
-    //     var employees_details = homeService.updateEmp($rootScope.current_id, data);
-    // };
-
-    // $scope.editEmployee = function(data) {
-    //     $scope.selectedEmployee = data;
-    //     $scope.selectedEmployeeCopy = angular.copy($scope.selectedEmployee);
-    // }
     $scope.deleteEmpRecord = function(ind) {
-        $scope.employees = homeService.deleteEmployee();
-        return $scope.employees
+        var result = confirm("Are you sure want to delete?");
+        if (result) {
+            $scope.employees = homeService.deleteEmployee(ind, $rootScope.current_id);
+        }
     };
-    // $scope.saveEmployee = function() {
-    //         for(k in $scope.selectedEmployee){
-    //          	$scope.selectedEmployee[k] = $scope.selectedEmpCopy[k];
-    //         }
-    //     }
+    $scope.editEmpRecord = function() {
+        $location.path('/home')
+    }
+
+    $scope.addEmpRecord = function(){
+    	
+    }
 };

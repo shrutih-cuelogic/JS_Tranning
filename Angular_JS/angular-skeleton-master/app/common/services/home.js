@@ -2,29 +2,50 @@ angular.module('home.service', ['employee.service'])
     .service('homeService', ['employeeService', homeService]);
 
 function homeService(employeeService) {
+    
     var service = {};
-    var employee_details = [];
+    var employee_records = [
+        {
+            'id': 1,
+            'email': 'pranay.dubey@cuelogic.co.in',
+            'password': 'pranay',
+            'emp_name': 'Pranay',
+            'address' : 'KP road,Pune'
+        }, 
+        {
+            'id': 2,
+            'email': 'shruti.hiremath@cuelogic.co.in',
+            'password': 'shruti',
+            'emp_name': 'Shruti',
+            'address' : 'Sinhgad road,Pune'
+        }, 
+        {
+            'id': 3,
+            'email': 'shweta.hiremath49@gmail.com',
+            'password': 'shweta49',
+            'emp_name': 'Shweta',
+            'address' : 'Aundh road,Pune'
+        }, 
+        {
+            'id': 4,
+            'email': 'richa.dagar@gmail.com',
+            'password': 'richa',
+            'emp_name': 'Richa',
+            'address' : 'Paud road,Pune'
+        }, 
+    ]
 
-    function get() {
-        employee_details = employeeService.employee();
-        return employee_details
+    function getEmp() {
+        return employee_records;
     };
 
-    function deleteEmployee(ind) {
-
-        var result = confirm("Are you sure want to delete?");
-        if (result) {
-            console.log(employee_details);
-            employee_details.splice(ind, 1);
-            console.log(employee_details);
-            return employee_details
-        } 
-        else {
-            return alert("You dont want to delete the item");
+    function deleteEmployee(ind, id) {
+        if(employee_records.id == id) {
+            employee_records.splice(ind, 1);
         }
     }
 
-    service.get = get;
+    service.getEmp = getEmp;
     service.deleteEmployee = deleteEmployee;
     return service
 };
