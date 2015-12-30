@@ -25,7 +25,8 @@ function HomeController($scope, $rootScope, $location, $routeParams, homeService
         $location.path('/home')
     }
 
-    $scope.addEmpRecord = function(){
-    	var valid = homeService.addEmployee($scope.id, $scope.emp_name, $scope.email, $scope.address);
+    $scope.addEmpRecord = function() {
+        homeService.addEmployee($scope.id, $scope.emp_name, $scope.email, $scope.address);
+        $location.path('/home')
     }
 };
