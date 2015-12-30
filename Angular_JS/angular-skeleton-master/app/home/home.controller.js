@@ -29,4 +29,5 @@ function HomeController($scope, $rootScope, $location, $routeParams, homeService
         homeService.addEmployee($scope.id, $scope.emp_name, $scope.email, $scope.address);
         $location.path('/home')
     }
+    $scope.sortrecords = '-emp_name';
 };

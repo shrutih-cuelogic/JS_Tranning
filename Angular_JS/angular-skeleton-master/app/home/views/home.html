@@ -1,19 +1,29 @@
-<button type="button" class="btn btn-success btn-side"><a href="#/add_emp">Add Employee</a></button>
+<button type="button" class="btn btn-side"><a href="#/add_emp">Add Employee</a></button>
 </br>
 </br>
+<div class="sort">
+    <strong>Sort by:</strong> 
+    <select class="sortform" ng-model="sortrecords">
+        <option value="id">ID</option>
+        <option value="emp_name">Name</option>
+        <option value="email">Email</option>
+        <option value="address">Address</option>
+    </select>
+</div>
+<br />
 <div class="table-responsive" id="side">
     <table class="table-bordered table-condensed" style="margin-right:30px;">
         <thead>
             <tr>
-                <th class="name" style="width:200px">ID</th>
-                <th class="name" style="width:200px"><a ng-click="sort_by('emp_name')">Name <i class="fa fa-sort"></i></a></th>
-                <th class="name" style="width:200px">Email</th>
-                <th class="name" style="width:200px">Address </th>
+                <th class="id" style="width:200px">ID</th>
+                <th class="name" style="width:200px">Name</th>
+                <th class="email" style="width:200px">Email</th>
+                <th class="address" style="width:200px">Address </th>
                 <th class="name" style="width:100px"> </th>
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="item in employees | orderBy: 'id'">
+            <tr ng-repeat="item in employees | orderBy:sortrecords ">
                 <td style="width:200px">{{ item.id }}</td>
                 <td style="width:200px"><a href="#/emp_view/{{ item.id }}" ng-model="item.emp_name">{{ item.emp_name }}</a></td>
                 <td style="width:200px" ng-model="item.email">{{ item.email }}</td>
