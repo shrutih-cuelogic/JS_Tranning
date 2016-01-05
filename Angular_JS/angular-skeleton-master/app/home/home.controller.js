@@ -21,6 +21,7 @@ function HomeController($scope, $rootScope, $location, $routeParams, homeService
             $scope.employees = homeService.deleteEmployee(ind, $rootScope.current_id);
         }
     };
+    
     $scope.editEmpRecord = function() {
         $location.path('/home')
     }
@@ -30,4 +31,5 @@ function HomeController($scope, $rootScope, $location, $routeParams, homeService
         $location.path('/home')
     }
     $scope.sortrecords = '-emp_name';
+
 };

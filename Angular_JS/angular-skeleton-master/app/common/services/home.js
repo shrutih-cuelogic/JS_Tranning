@@ -1,7 +1,7 @@
 angular.module('home.service', ['employee.service'])
     .service('homeService', ['employeeService', homeService]);
 
-function homeService(employeeService) {
+function homeService(homeService) {
 
     var service = {};
     var employee_records = [{

@@ -2,7 +2,7 @@ angular.module('login.controller', ['services'])
     .controller('loginCtrl', ['$scope', '$location', 'loginService', LoginController])
 
 function LoginController($scope, $location, loginService) {
-    $scope.myForm = {
+    $scope.loginForm = {
         email: $scope.email,
         password: $scope.password
     };
@@ -16,5 +16,7 @@ function LoginController($scope, $location, loginService) {
         else{
           alert('Invalid email and password');
         }
+        $scope.email = '';
+        $scope.password = '';
     }
 };
