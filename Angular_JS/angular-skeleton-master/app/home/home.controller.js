@@ -1,7 +1,7 @@
 angular.module('home.controller', ['services'])
-    .controller('homeCtrl', ['$scope', '$rootScope', '$location', '$routeParams', 'homeService', HomeController])
+    .controller('homeCtrl', ['$scope', '$rootScope', '$location', '$routeParams', 'serverLocalStorageService', 'homeService', HomeController])
 
-function HomeController($scope, $rootScope, $location, $routeParams, homeService) {
+function HomeController($scope, $rootScope, $location, $routeParams, serverLocalStorageService, homeService) {
     // var employeeObj = localStorage.getItem('employeeObj');
     // if (employeeObj) {
     //     $scope.employeeObj = JSON.parse(employeeObj);
@@ -31,5 +31,11 @@ function HomeController($scope, $rootScope, $location, $routeParams, homeService
         $location.path('/home')
     }
     $scope.sortrecords = '-emp_name';
+
+    $scope.logout = function() {
+            serverLocalStorageService.clearAll();
+             $location.path('/login');
+             serverLocalStorageService.get('tokenid');
+    }
 
 };

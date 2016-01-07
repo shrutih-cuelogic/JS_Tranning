@@ -5,7 +5,8 @@
                 <div class="panel-heading"> <strong class="">Login</strong>
                 </div>
                 <div class="panel-body">
-                    <form name="loginForm" class="form-horizontal" novalidate ng-submit="login()" class="form-horizontal" role="form">
+                <div ng-show="error" class="alert alert-danger">{{error}}</div>
+                    <form name="loginForm" class="form-horizontal" novalidate ng-submit="validateLogin()" class="form-horizontal" role="form">
                         <div class="form-group">
                             <label for="email" class="col-sm-3 log-control-label">Email </label>
                             <div class="col-sm-9">

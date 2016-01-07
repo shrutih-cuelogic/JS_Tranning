@@ -4,15 +4,15 @@
 angular.module('tandem', [
   'ngRoute',
   'LocalStorageModule',
-  'home',
   'employee',
+  'registration',
   'login',
-  'registration'
-]).
+  'home'
+  ]).
 config(['$routeProvider', function($routeProvider) {
 
-  	$routeProvider.otherwise({redirectTo: '/login'});
-}]);
+  	$routeProvider.otherwise({redirectTo: '/home'});
+}])
 .config(['localStorageServiceProvider', '$httpProvider',
         function(localStorageServiceProvider, $httpProvider) {
                 localStorageServiceProvider
