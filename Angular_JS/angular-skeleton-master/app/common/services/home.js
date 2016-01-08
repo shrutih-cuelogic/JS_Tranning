@@ -1,7 +1,7 @@
-angular.module('home.service', ['employee.service'])
-    .service('homeService', ['employeeService', homeService]);
+angular.module('home.service', [])
+    .service('homeService', ['$rootScope', '$location', homeService]);
 
-function homeService(homeService) {
+function homeService($rootScope, $location) {
 
     var service = {};
     var employee_records = [{
@@ -34,10 +34,15 @@ function homeService(homeService) {
         return employee_records;
     };
 
-    function deleteEmployee(ind, id) {
-        if (employee_records.id == id) {
-            employee_records.splice(ind, 1);
+    function deleteEmployee(email) {
+        for (var i = 0; i < employee_records.length; i++) {
+            if (employee_records[i]["email"] == email) {
+                employee_records.splice(employee_records.indexOf(employee_records[i]), 1);
+                console.log(employee_records);
+                break;
+            }
         }
+        return employee_records;
     }
 
     function addEmployee(id, name, email, address) {

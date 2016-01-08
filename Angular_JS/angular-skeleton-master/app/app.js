@@ -4,10 +4,12 @@
 angular.module('tandem', [
     'ngRoute',
     'LocalStorageModule',
-    'employee',
     'registration',
     'login',
-    'home'
+    'home',
+    'employee',
+    'directives',
+    'services'
 ]).
 config(['$routeProvider', function($routeProvider) {
 

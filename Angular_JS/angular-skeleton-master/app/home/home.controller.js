@@ -9,13 +9,27 @@ function HomeController($scope, $rootScope, $location, $routeParams, serverLocal
         $rootScope.current_id = $routeParams.id;
     });
 
-    $scope.deleteEmpRecord = function(ind) {
-        var result = confirm("Are you sure want to delete?");
-        if (result) {
-            $scope.employees = homeService.deleteEmployee(ind, $rootScope.current_id);
-        }
-    };
+    // $scope.deleteEmpRecord = function(ind) {
+    //     var result = confirm("Are you sure want to delete?");
+    //     if (result) {
+    //         $scope.employees = homeService.deleteEmployee(ind, $rootScope.current_id);
+    //     }
+    // };
     
+    // $scope.deleteEmpRecord = function (email){
+    //      homeService.deleteEmployee(email).then(
+    //       function(response) {
+    //         alert('m in directive');
+    //         $rootScope.employees = response;
+
+    //         $location.path('/home'+ $rootScope.email);
+
+    //       }, function(rejected){
+    //         $scope.error=rejected;
+    //       } 
+    //     );
+    // };
+
     $scope.editEmpRecord = function() {
         $location.path('/home')
     }
