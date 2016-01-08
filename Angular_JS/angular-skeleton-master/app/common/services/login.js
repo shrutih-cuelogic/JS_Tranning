@@ -11,11 +11,8 @@ function loginService($q, serverLocalStorageService, homeService) {
         return $q(function(resolve, reject) {
             valid = false;
             var emp_credentials = homeService.getEmp();
-            console.log(emp_credentials);
             for (var i = 0; i < emp_credentials.length; i++) {
-                console.log(emp_credentials[i]['email'], email);
                 if (emp_credentials[i]['email'] == email && emp_credentials[i]['password'] == password) {
-                    console.log('Equal');
                     valid = true;
                     break;
                 }
