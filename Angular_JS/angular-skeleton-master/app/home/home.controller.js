@@ -2,12 +2,6 @@ angular.module('home.controller', ['services'])
     .controller('homeCtrl', ['$scope', '$rootScope', '$location', '$routeParams', 'serverLocalStorageService', 'homeService', HomeController])
 
 function HomeController($scope, $rootScope, $location, $routeParams, serverLocalStorageService, homeService) {
-    // var employeeObj = localStorage.getItem('employeeObj');
-    // if (employeeObj) {
-    //     $scope.employeeObj = JSON.parse(employeeObj);
-
-    // } else {
-    //     $location.path('/login');
 
     $scope.employees = homeService.getEmp();
 

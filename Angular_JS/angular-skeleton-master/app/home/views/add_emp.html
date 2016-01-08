@@ -7,56 +7,56 @@
                     </br>
                 </div>
                 <div class="pro-content">
-                  <div class="pro-box">
-                    <form name="addEmpForm" novalidate>
-                         <div class="form-group">
-                            <label class="col-sm-3 control-label"><span class="change-color"><strong>Employee Id :</strong></span></label>
-                            <div class="col-sm-9">
-                                <input ng-model="id" type="id" id="id" name="id" class="form-control" autofocus="true" autocomplete="off" required>
-                                <span style="color:red" ng-show="addEmpForm.id.$dirty && addEmpForm.id.$invalid">
+                    <div class="pro-box">
+                        <form name="addEmpForm" novalidate>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><span class="change-color"><strong>Employee Id :</strong></span></label>
+                                <div class="col-sm-9">
+                                    <input ng-model="id" type="id" id="id" name="id" class="form-control" autofocus="true" autocomplete="off" required>
+                                    <span style="color:red" ng-show="addEmpForm.id.$dirty && addEmpForm.id.$invalid">
                               <span ng-show="addEmpForm.id.$error.required">Id is required.</span>
-                                </span>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        </br>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label"><span class="change-color"><strong>Employee Name :</strong></span></label>
-                            <div class="col-sm-9">
-                                <input ng-model="emp_name" type="emp_name" id="emp_name" name="emp_name" class="form-control" autofocus="true" autocomplete="off" required>
-                                <span style="color:red" ng-show="addEmpForm.emp_name.$dirty && addEmpForm.emp_name.$invalid">
+                            </br>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><span class="change-color"><strong>Employee Name :</strong></span></label>
+                                <div class="col-sm-9">
+                                    <input ng-model="emp_name" type="emp_name" id="emp_name" name="emp_name" class="form-control" autofocus="true" autocomplete="off" required>
+                                    <span style="color:red" ng-show="addEmpForm.emp_name.$dirty && addEmpForm.emp_name.$invalid">
                               <span ng-show="addEmpForm.emp_name.$error.required">Name is required.</span>
-                              </span>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        </br>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label"><span class="change-color"><strong>Employee Email :</strong></span></label>
-                            <div class="col-sm-9">
-                                <input ng-model="email" type="email" id="email" name="email" class="form-control" autofocus="true" autocomplete="off" required>
-                                <span style="color:red" ng-show="addEmpForm.email.$dirty && addEmpForm.email.$invalid">
+                            </br>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><span class="change-color"><strong>Employee Email :</strong></span></label>
+                                <div class="col-sm-9">
+                                    <input ng-model="email" type="email" id="email" name="email" class="form-control" autofocus="true" autocomplete="off" required>
+                                    <span style="color:red" ng-show="addEmpForm.email.$dirty && addEmpForm.email.$invalid">
                               <span ng-show="addEmpForm.email.$error.required">Email is required.</span>
-                                <span ng-show="addEmpForm.email.$error.email">Invalid email address.</span>
-                                </span>
+                                    <span ng-show="addEmpForm.email.$error.email">Invalid email address.</span>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        </br>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label"><span class="change-color"><strong>Employee Address :</strong></span></label>
-                            <div class="col-sm-9">
-                                <input ng-model="address" type="address" id="address" name="address" class="form-control" autofocus="true" autocomplete="off" required>
-                                <span style="color:red" ng-show="addEmpForm.address.$dirty && addEmpForm.address.$invalid">
+                            </br>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><span class="change-color"><strong>Employee Address :</strong></span></label>
+                                <div class="col-sm-9">
+                                    <input ng-model="address" type="address" id="address" name="address" class="form-control" autofocus="true" autocomplete="off" required>
+                                    <span style="color:red" ng-show="addEmpForm.address.$dirty && addEmpForm.address.$invalid">
                             <span ng-show="addEmpForm.address.$error.required">Address is required.</span>
-                                </span>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
                     </div>
                     </br>
                     </br>
-                      <div>
-                          <button type="button" class="btn btn-md btn-primary btn-size" ng-click="addEmpRecord()"><i class="fa fa-save" ng-disabled="addEmpForm.$invalid"> Save</i></button>
-                      </div>
-                  </div>
+                    <div>
+                        <button type="button" class="btn btn-md btn-primary btn-size" ng-click="addEmpRecord()"><i class="fa fa-save" ng-disabled="addEmpForm.$invalid"> Save</i></button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
