@@ -15,21 +15,6 @@ function HomeController($scope, $rootScope, $location, $routeParams, serverLocal
     //         $scope.employees = homeService.deleteEmployee(ind, $rootScope.current_id);
     //     }
     // };
-    
-    // $scope.deleteEmpRecord = function (email){
-    //      homeService.deleteEmployee(email).then(
-    //       function(response) {
-    //         alert('m in directive');
-    //         $rootScope.employees = response;
-
-    //         $location.path('/home'+ $rootScope.email);
-
-    //       }, function(rejected){
-    //         $scope.error=rejected;
-    //       } 
-    //     );
-    // };
-
     $scope.editEmpRecord = function() {
         $location.path('/home')
     }
