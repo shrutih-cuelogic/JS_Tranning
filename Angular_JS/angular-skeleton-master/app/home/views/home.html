@@ -36,7 +36,7 @@
 <!--                     <a href="#" class="btn btn-info btn-sm" ng-click="deleteEmpRecord($index)">
                         <span class="glyphicon glyphicon-trash"></span> Delete
                     </a> -->
-                    <employee-delete email="{{item.email}}"></employee-delete>
+                    <custom-action action-click="deleteEmployee" action-click-args="{{item.email}}" ></custom-action>
                 </td>
             </tr>
         </tbody>

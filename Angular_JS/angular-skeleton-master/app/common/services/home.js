@@ -32,13 +32,12 @@ function homeService($rootScope, $location) {
 
     function getEmp() {
         return employee_records;
-    };
+    }
 
     function deleteEmployee(email) {
         for (var i = 0; i < employee_records.length; i++) {
             if (employee_records[i]["email"] == email) {
                 employee_records.splice(employee_records.indexOf(employee_records[i]), 1);
-                console.log(employee_records);
                 break;
             }
         }

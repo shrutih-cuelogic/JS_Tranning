@@ -17,18 +17,23 @@ function HomeController($scope, $rootScope, $location, $routeParams, serverLocal
     // };
     $scope.editEmpRecord = function() {
         $location.path('/home')
-    }
+    };
+
+    $scope.deleteEmployee = function(email) {
+         var employees = homeService.deleteEmployee(email);
+         $scope.employees = employees;
+    };
 
     $scope.addEmpRecord = function() {
         homeService.addEmployee($scope.id, $scope.emp_name, $scope.email, $scope.address);
         $location.path('/home')
-    }
+    };
     $scope.sortrecords = '-emp_name';
 
     $scope.logout = function() {
             serverLocalStorageService.clearAll();
              $location.path('/login');
              serverLocalStorageService.get('tokenid');
-    }
+    };
 
 };

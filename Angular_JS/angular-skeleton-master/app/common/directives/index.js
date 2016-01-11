@@ -1,1 +1,1 @@
-angular.module('directives',['home.service', 'employee.delete']);
+angular.module('directives',['home.service', 'employee.directives']);
